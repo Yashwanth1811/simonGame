@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <h1>Double click on the page to start</h1>
+  <h1 class="head">Double click on the page to start</h1>
   <div id="outer-circle">
     <div id="yellow" class="btn"></div>
     <div id="red" class="btn"></div>
@@ -30,11 +30,22 @@
     <button class="start">Start</button>
   </div>
 
+  <script>
+    var y = window.matchMedia("(max-width:1000px)")
+    y.addListener(function(e) {
+      if (e.matches) {
+        document.querySelector("h1").innerHTML = "Click on Start";
+      } else {
+        document.querySelector("h1").innerHTML = "Double click on the page to start";
+      }
+    })
+  </script>
+
   <footer>
     <a href="https://www.facebook.com/profile.php?id=100082742266684"><i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</a>
     <a href="https://www.linkedin.com/in/yashwanth-n-90b464240"><i class="fa fa-linkedin-square" aria-hidden="true"></i>LinkedIn</a>
     <a href="https://www.instagram.com/im.not.yash/"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a>
-    <a  href="https://github.com/Yashwanth1811"><i class="fa fa-github-square" aria-hidden="true"></i>GitHub</a>
+    <a href="https://github.com/Yashwanth1811"><i class="fa fa-github-square" aria-hidden="true"></i>GitHub</a>
     <p class="Y">🟡Made🔴By🔵Yash🟢</p>
   </footer>
 
